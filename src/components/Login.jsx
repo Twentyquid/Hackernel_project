@@ -19,6 +19,7 @@ export default function Login() {
   }
 
   function handleSubmit(e) {
+    // e.preventDefault();
     let userDetails = { name, email, password };
     if (
       userDetails.name !== "" &&

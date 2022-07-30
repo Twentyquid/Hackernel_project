@@ -10,6 +10,8 @@ import Wallet from "./components/Wallet";
 import Login from "./components/Login";
 
 function App() {
+  let [balance, setBalance] = useState("3000");
+  console.log("balance when created:", parseInt(balance));
   let [logged, setLogged] = useState("");
   useEffect(() => {
     let user = localStorage.getItem("user");
@@ -18,9 +20,12 @@ function App() {
   return logged ? (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home balance={parseInt(balance)} />} />
         <Route path="/stats" element={<Stats></Stats>} />
-        <Route path="/wallet" element={<Wallet></Wallet>} />
+        <Route
+          path="/wallet"
+          element={<Wallet balance={balance} setBalance={setBalance}></Wallet>}
+        />
       </Routes>
       <BottomNav></BottomNav>
     </>
