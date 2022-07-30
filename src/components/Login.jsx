@@ -6,6 +6,8 @@ export default function Login() {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
 
+  useEffect(() => {}, []);
+
   function handleChange(e) {
     let formName = e.target.value;
     let valueType = e.target.name;
@@ -19,8 +21,21 @@ export default function Login() {
   }
 
   function handleSubmit(e) {
-    // e.preventDefault();
+    e.preventDefault();
     let userDetails = { name, email, password };
+    fetch("https://flask-app-jgz.herokuapp.com/signup", {
+      method: "POST",
+      body: JSON.stringify(userDetails),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     if (
       userDetails.name !== "" &&
       userDetails !== "" &&

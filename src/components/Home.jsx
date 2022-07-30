@@ -13,7 +13,7 @@ export default function Home({ balance }) {
     setUsername(username);
   }, []);
   return (
-    <div className="bg-slate-900 h-screen p-6 pb-0 mb-7">
+    <div className="bg-white h-screen p-6 pb-0 mb-7">
       <div className="text-white mb-5 bg-indigo-500 p-7 rounded-t flex justify-between items-center rounded-3xl">
         <h1>Hello {username}</h1>
         <img className="w-6 h-6 rounded-full object-cover" src={user} alt="" />

@@ -10,7 +10,7 @@ let transactions = [
 function Transactions() {
   return (
     <div className="pb-9">
-      <h3 className="text-slate-100 mt-11">Transactions:</h3>
+      <h3 className="text-black mt-11">Transactions:</h3>
       {transactions.map((element) => {
         return (
           <TransactionItems key={element.id} item={element}></TransactionItems>

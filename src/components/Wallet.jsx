@@ -38,7 +38,7 @@ export default function Wallet({ setBalance, balance }) {
     <div className="p-3 flex justify-center items-center flex-col">
       <h3 className="text-white text-2xl">Wallet</h3>
       <form onSubmit={handleSubmit}>
-        <label className="text-white" htmlFor="name">
+        <label className="text-indigo-800" htmlFor="name">
           To:
         </label>
         <br></br>
@@ -50,7 +50,7 @@ export default function Wallet({ setBalance, balance }) {
         </select>
 
         <br></br>
-        <label className="text-white" htmlFor="email">
+        <label className="text-indigo-800 mt-6" htmlFor="email">
           Tokens:
         </label>
         <br />
